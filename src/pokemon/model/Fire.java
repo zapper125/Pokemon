@@ -1,6 +1,8 @@
 package pokemon.model;
 
-public class Fire
+public interface Fire
 {
-
+	public void Fireball();
+	
+	public void Ringshot();
 }

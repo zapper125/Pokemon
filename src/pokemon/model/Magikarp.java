@@ -4,12 +4,12 @@ public class Magikarp extends Pokemon
 {
 	public Magikarp()
 	{
-		super(420, "Magikarp");
+		super(90, "Magikarp");
 	}
 	
 	public Magikarp(String name)
 	{
-		super(420, name);
+		super(90, name);
 	}
 	
 	public Magikarp(int num, String name)

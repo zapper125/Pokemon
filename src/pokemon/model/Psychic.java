@@ -1,6 +1,8 @@
 package pokemon.model;
 
-public class Psychic
+public interface Psychic
 {
-
+	public void Sleepyboi();
+	
+	public void Beam();
 }

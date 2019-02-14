@@ -1,5 +1,7 @@
 package pokemon.controller;
 
+import javax.swing.JOptionPane;
+
 import pokemon.model.Pokemon;
 import pokemon.view.PokedexFrame;
 
@@ -31,8 +33,8 @@ public class PokedexController
 		}
 	}
 
-public String[] buildPokedexText()
-{
+	public String[] buildPokedexText()
+	{
 	String [] names =  new String [pokemonList.size()];
 			
 	for(int index = 0; index < pokemonList.size() index++);
@@ -40,6 +42,40 @@ public String[] buildPokedexText()
 				names[index]= pokemonList.get(index).getName();
 			}
 			return names;
-}
+	}
+	
+	public boolean validInt(String maybeInt)
+	{
+		boolean isValid = false;
+				
+		try
+		{
+			Integer.parseInt(maybeInt);
+			isValid = true;
+		}
+		catch (NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "You need to type in a number :/");
+		}
+		return isValid;
+	}
+	
+	public boolean validDouble(String mightbeDouble)
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			Double.parseDouble(mightbeDouble);
+			isValid = true;
+		}
+		catch (NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null,  "Type in a decimal value aka a number with a . in it");
+		}
+		
+		return isValid;
+	
+	}
 
 }
