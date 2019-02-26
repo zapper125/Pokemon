@@ -52,15 +52,15 @@ class TestPokedexController
 	@Test
 	void testValidationMethods()
 	{
-		assertFalse(tested.isDouble(""), "Empty text is not a number");
-		assertFalse(tested.isDouble("text"), "Text is not a number");
-		assertTrue(tested.isDouble("9"), "9 is a number");
-		assertTrue(tested.isDouble("9.09"), "9 is a number");
+		assertFalse(tested.validDouble(""), "Empty text is not a number");
+		assertFalse(tested.validDouble("text"), "Text is not a number");
+		assertTrue(tested.validDouble("9"), "9 is a number");
+		assertTrue(tested.validDouble("9.09"), "9 is a number");
 		
-		assertFalse(tested.isInt(""), "Empty text is not a number");
-		assertFalse(tested.isInt("text"), "Text is not a number");
-		assertFalse(tested.isInt("3.2"), "Doubles are not ints");
-		assertTrue(tested.isInt("9"), "9 is an integer number");
+		assertFalse(tested.validInt(""), "Empty text is not a number");
+		assertFalse(tested.validInt("text"), "Text is not a number");
+		assertFalse(tested.validInt("3.2"), "Doubles are not ints");
+		assertTrue(tested.validInt("9"), "9 is an integer number");
 	}
 	
 	@Test

@@ -1,8 +1,9 @@
 package pokemon.model;
 
 import java.util.ArrayList;
+import java.io.Serializable;
 
-public abstract class Pokemon
+public abstract class Pokemon implements Serializable
 {
 	private int healthPoints;
 	private int attackPoints;
