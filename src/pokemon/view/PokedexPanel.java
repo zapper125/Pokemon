@@ -42,7 +42,7 @@ public class PokedexPanel extends JPanel
 		this.appController = appController;
 		appLayout = new SpringLayout();
 
-		this.pokemonIcon = new ImageIcon(getClass().getResource("/pokemon/view/images/Psyduck.jpeg"));
+		this.pokemonIcon = new ImageIcon(getClass().getResource("/Pokemon/view/images/pokeball.jpg"));
 
 		numberField = new JTextField("0");
 		nameField = new JTextField("My pokename");
@@ -117,6 +117,19 @@ public class PokedexPanel extends JPanel
 			// insert code here
 			appController.updatePokemon(index, data);
 		}
+	}
+	
+	private void updateFields(int index)
+	{
+		String [] data = appController.getPokeData(index);
+		
+		attackField.setText(data[0]);
+		enhancementField.setText(data[1]);
+		healthField.setText(data[2]);
+		nameField.setText(data[3]);
+		evolveField.setText(data[4]);
+		numberField.setText(data[5]);
+		
 	}
 
 	private void changeImageDisplay(String name)

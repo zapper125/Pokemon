@@ -96,6 +96,19 @@ public class PokedexController
 		return isValid;
 
 	}
+	
+	public String [] getPokeData(int index)
+	{
+        String [] data = new String [6];
+        Pokemon current = pokemonList.get(index);
+        data[0] = current.getAttackPoints() + "";
+        data[1] = current.getEnhancementModifier() + "";
+        data[2] = current.getHealthPoints() + "";
+        data[3] = current.getName() + "";
+        data[4] = current.isCanEvolve() + "";
+        data[5] = current.getNumber() + "";
+        return data;
+    }
 
 	public void savePokedex()
 	{
@@ -130,8 +143,14 @@ public class PokedexController
 		}
 		catch (ClassNotFoundException pokemonError)
 		{
-			JOptionPane.showMessageDialog(appFrame, pokemonError.getMessage(), "Type Errror", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(appFrame, pokemonError.getMessage(), "Type Error", JOptionPane.ERROR_MESSAGE);
 		}
+	}
+
+	public Object getFrame()
+	{
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
